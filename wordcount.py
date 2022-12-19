@@ -1,9 +1,14 @@
 """Count words in file."""
 
+import sys
 
 # open file
-all_text = open("test.txt")
+# all_text = open("test.txt")
 # all_text = open("twain.txt")
+
+# FURTHER STUDY - open file
+filename = sys.argv[1]
+all_text = open(filename)
 
 # initiate empty dictionary
 words_dict = {}
@@ -24,3 +29,5 @@ for line in all_text:
 # print count for each word
 for word, count in words_dict.items():
     print(word, count)
+
+
